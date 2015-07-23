@@ -9,6 +9,14 @@
 		
 		<div id="app">
 			
+			<header>
+				<h1>Title</h1>
+				<nav>
+					<ul id="menu">
+					</ul>
+				</nav>
+			</header>
+
 		</div>
 		
 		<script src="js/libs/require.js" data-main="js/main"></script>

@@ -1,5 +1,7 @@
 'use strict';
 
+var App = App || {};
+
 require.config({
 	baseUrl: 'js',
 	paths: {
@@ -24,10 +26,19 @@ require.config({
 require([
 	'backbone',
 	'app/routes',
-], function(Backbone, Workspace) {
+	'app/models/MenuItemsCollection',
+	'app/views/MainMenuView',
+], function(Backbone, Routes, MenuItemsCollection, MainMenuView) {
 	
-	new Workspace();
+	App.routes = new Routes();
 	
 	Backbone.history.start();
+
+	App.mainMenu = {};
+	App.mainMenu.model = new MenuItemsCollection();
+	App.mainMenu.view = new MainMenuView({ model: App.mainMenu.model });
+
+	App.mainMenu.model.add({ text: 'Foo' });
+	App.mainMenu.model.add({ text: 'Bar' });
 
 });
