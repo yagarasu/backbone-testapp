@@ -12,8 +12,7 @@
 			<header>
 				<h1>Title</h1>
 				<nav>
-					<ul id="menu">
-					</ul>
+					<ul id="menu"></ul>
 				</nav>
 			</header>
 

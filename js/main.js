@@ -8,7 +8,8 @@ require.config({
 		jquery: 'libs/jquery',
 		underscore: 'libs/underscore',
 		backbone: 'libs/backbone',
-		text: 'libs/text'
+		text: 'libs/text',
+		mustache: 'libs/mustache'
 	},
 	shim: {
 		'backbone': {
@@ -36,10 +37,10 @@ require([
 	Backbone.history.start();
 
 	App.mainMenu = {};
-	App.mainMenu.model = new MenuItemsCollection();
+	App.mainMenu.model = new MenuItemsCollection([
+		{ text: 'Dashboard', link: '#' },
+		{ text: 'Help', link: '#help' }
+	]);
 	App.mainMenu.view = new MainMenuView({ model: App.mainMenu.model });
-
-	App.mainMenu.model.add({ text: 'Foo' });
-	App.mainMenu.model.add({ text: 'Bar' });
 
 });
