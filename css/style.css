@@ -1,0 +1,11 @@
+/**
+ * Main CSS
+ */
+
+/* Reset */
+@import url('reset.css');
+
+html, body {
+	font-family: helvetica, sans-serif;
+	font-size: 100%;
+}

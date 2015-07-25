@@ -16,6 +16,20 @@
 				</nav>
 			</header>
 
+			<div id="workspace">
+				<header>
+					<nav>
+						<ul>
+							<li><a href="#">Item</a></li>
+							<li><a href="#">Item</a></li>
+							<li><a href="#">Item</a></li>
+							<li><a href="#">Item</a></li>
+						</ul>
+					</nav>
+				</header>
+				<h2>Section</h2>
+			</div>
+
 		</div>
 		
 		<script src="js/libs/require.js" data-main="js/main"></script>
